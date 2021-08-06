@@ -4,8 +4,8 @@ const router = express.Router();
 const questionNumber = require('../controller/question');
 
 /* GET home page. */
-router.get('/', questionNumber.sendQsTo);
+router.post('/', questionNumber.sendQsTo);
 
-router.get('/check', questionNumber.sendCheckTo);
+router.post('/check', questionNumber.sendCheckTo);
 
 module.exports = router;
